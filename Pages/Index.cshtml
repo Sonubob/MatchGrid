@@ -1,0 +1,54 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    /*Custom css*/
+    #match-grid {
+        border: solid 1px;
+    }
+
+    th, td {
+        padding: 50px;
+    }
+    .red-cover{
+        color:red;
+        background-color:red;
+        border:solid 1px black;
+    }
+    .white-cover {
+        color: black;
+        background-color: white;
+        border: solid 1px black;
+    }
+    .prevent-select {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+    }
+</style>
+
+<div class="text-center">
+    <p> Find the matching pair</p>
+    <table id="match-grid">
+        <tr class="prevent-select">
+            <td class="red-cover" id="grid1"><p>1</p></td>
+            <td class="red-cover" id="grid2"><p>3</p></td>
+            <td class="red-cover" id="grid3"><p>2</p></td>
+        </tr>
+        <tr class="prevent-select">
+            <td class="red-cover" id="grid6"><p>1</p></td>
+            <td class="red-cover" id="grid4"><p>4</p></td>
+            <td class="red-cover" id="grid5"><p>5</p></td>
+        </tr>
+        <tr class="prevent-select">
+            <td class="red-cover" id="grid7"><p>4</p></td>
+            <td class="red-cover" id="grid8"><p>3</p></td>
+            <td class="red-cover" id="grid9"><p>2</p></td>
+        </tr>
+
+    </table>
+
+</div>
