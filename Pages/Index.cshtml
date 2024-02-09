@@ -29,26 +29,35 @@
         user-select: none; /* Standard syntax */
     }
 </style>
+<div>
+   <h4>Count of row and column :</h4> @Html.TextBox("Row/Column count", 2)
+   <button>@Html.ActionLink("Create Grid","GenerateGrid")</button>
+</div>
+<div class="text-center" style="display: grid; justify-content: space-between; justify-items: stretch">
+    <div>
+        <p> Find the matching pair</p>
+        <table id="match-grid">
+            <tr class="prevent-select">
+                <td class="red-cover" id="grid1"><p>1</p></td>
+                <td class="red-cover" id="grid2"><p>3</p></td>
+                <td class="red-cover" id="grid3"><p>2</p></td>
+            </tr>
+            <tr class="prevent-select">
+                <td class="red-cover" id="grid6"><p>1</p></td>
+                <td class="red-cover" id="grid4"><p>4</p></td>
+                <td class="red-cover" id="grid5"><p>5</p></td>
+            </tr>
+            <tr class="prevent-select">
+                <td class="red-cover" id="grid7"><p>4</p></td>
+                <td class="red-cover" id="grid8"><p>3</p></td>
+                <td class="red-cover" id="grid9"><p>2</p></td>
+            </tr>
 
-<div class="text-center">
-    <p> Find the matching pair</p>
-    <table id="match-grid">
-        <tr class="prevent-select">
-            <td class="red-cover" id="grid1"><p>1</p></td>
-            <td class="red-cover" id="grid2"><p>3</p></td>
-            <td class="red-cover" id="grid3"><p>2</p></td>
-        </tr>
-        <tr class="prevent-select">
-            <td class="red-cover" id="grid6"><p>1</p></td>
-            <td class="red-cover" id="grid4"><p>4</p></td>
-            <td class="red-cover" id="grid5"><p>5</p></td>
-        </tr>
-        <tr class="prevent-select">
-            <td class="red-cover" id="grid7"><p>4</p></td>
-            <td class="red-cover" id="grid8"><p>3</p></td>
-            <td class="red-cover" id="grid9"><p>2</p></td>
-        </tr>
-
-    </table>
-
+        </table>
+    </div>
+    
+   <div>
+       <p>Time limit: 2 minutes</p>
+       <p id="testTimer"></p>
+   </div>
 </div>

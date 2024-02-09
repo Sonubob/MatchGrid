@@ -11,9 +11,22 @@ $resetValues = function () {
 
 $changeToRedCover = function ( id ) {
     if (($('#' + id).hasClass('white-cover')) && !($('#' + id).hasClass('disable-click'))) {
-        $('#' + id).delay(500).toggleClass('white-cover').toggleClass('red-cover');
+        $('#' + id).delay(1000).toggleClass('white-cover').delay(1000).toggleClass('red-cover');
     }
 }
+function Timer() {
+    var counter = 120;
+    var myTimer = setInterval(function () {
+        document.getElementById("testTimer").innerHTML = counter;
+        counter--;
+        if (counter < 0) {
+            clearInterval(myTimer);
+            document.getElementById("testTimer").style.color = "red";
+           
+        }
+    }, 1000);
+}
+Timer();
 
 $("#match-grid td").click(function () {
 
